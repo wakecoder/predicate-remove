@@ -1,0 +1,30 @@
+{
+  "name": "predicate-remove",
+  "version": "1.0.0",
+  "description": "A small function that removes one or more items from an array based upon a predicate function",
+  "main": "index.js",
+  "dependencies": {
+    "chai": "^3.5.0",
+    "mocha": "^3.1.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wakecoder/predicate-remove.git"
+  },
+  "keywords": [
+    "remove",
+    "array",
+    "predicate",
+    "value"
+  ],
+  "author": "Dave Beck (wakecoder)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/wakecoder/predicate-remove/issues"
+  },
+  "homepage": "https://github.com/wakecoder/predicate-remove#readme"
+}
