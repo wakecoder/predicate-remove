@@ -22,6 +22,12 @@ describe('remove', () => {
         expect(removed.length).to.equal(0);
         expect(testArray.length).to.equal(4);
     });
+    it ('should remove only the first match if removeAll is false',()=> {
+        const testArray = [{ id: 3 }, { id: 6 }, { id: 5 }, { id: 6 }];
+        const removed = remove(testArray, e => e.id == 6);
+        expect(testArray.length).to.equal(3);
+        expect (testArray[1].id).to.equal(5);
+    })
 })
 
 describe ('monkeyPatch',()=> {
