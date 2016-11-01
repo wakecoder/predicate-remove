@@ -3,11 +3,11 @@
   "version": "1.0.0",
   "description": "A small function that removes one or more items from an array based upon a predicate function",
   "main": "index.js",
-  "dependencies": {
+  "dependencies": {},
+  "devDependencies": {
     "chai": "^3.5.0",
     "mocha": "^3.1.2"
   },
-  "devDependencies": {},
   "scripts": {
     "test": "mocha"
   },
