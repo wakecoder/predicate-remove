@@ -1,19 +1,20 @@
 let remove = function (array, predicate, removeAll) {
-    const removed = [];
-    const getIndex = removeAll ? i=>i : i=>array.length - i -1; //Loop backwards if removing all matches. 
-    for (let i = array.length - 1; i >= 0; i--) {
-        let index = getIndex (i);
-        if (predicate(array[index])) {
-            removed.push(array.splice(index, 1)[0]);
-            if (!removeAll) { return removed; }
+    const removed = { values: [], indices: [] };
+    for (let i = 0; i < array.length; i++) {
+        if (predicate(array[i])) {
+            removed.indices.push(i);
+            removed.values.push(array[i]);
+            if (!removeAll) { break; }
         }
     }
-    return removed;
+    while (removed.indices.length > 0) { 
+        array.splice(removed.indices.pop(), 1); } // start from the last match and remove from the array
+    return removed.values;
 }
 module.exports = {
     monkeyPatch: function () {
         Array.prototype.remove = function (predicate, removeAll) {
-           return  remove(this, predicate, removeAll);
+            return remove(this, predicate, removeAll);
         }
     },
     remove: remove
