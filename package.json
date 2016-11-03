@@ -1,6 +1,6 @@
 {
   "name": "predicate-remove",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "A small function that removes one or more items from an array based upon a predicate function",
   "main": "index.js",
   "dependencies": {},

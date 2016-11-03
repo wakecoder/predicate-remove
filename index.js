@@ -1,6 +1,6 @@
-let remove = function (array, predicate, removeAll) {
-    const removed = { values: [], indices: [] };
-    for (let i = 0; i < array.length; i++) {
+var remove = function (array, predicate, removeAll) {
+    var removed = { values: [], indices: [] };
+    for (var i = 0; i < array.length; i++) {
         if (predicate(array[i])) {
             removed.indices.push(i);
             removed.values.push(array[i]);
